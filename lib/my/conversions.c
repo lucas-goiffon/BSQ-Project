@@ -21,7 +21,7 @@ int binary_conversion(unsigned long nb)
     char_size = char_size - 1;
     if (nb == 0)
         str = "0\0";
-    for (char_size; nb > 0; char_size = char_size - 1) {
+    for (char_size = char_size; nb > 0; char_size = char_size - 1) {
         r = nb % 2;
         binary_conversion_two(r, str, char_size);
         nb = nb / 2;
@@ -52,7 +52,7 @@ int hexa_conversion_upp(unsigned long nb)
     char_size = char_size - 1;
     if (nb == 0)
         str = "0\0";
-    for (char_size; nb > 0; char_size = char_size - 1) {
+    for (char_size = char_size; nb > 0; char_size = char_size - 1) {
         r = nb % 16;
         hexa_conversion_upp_two(r, str, char_size);
         nb = nb / 16;

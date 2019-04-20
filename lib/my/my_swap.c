@@ -9,7 +9,7 @@
 
 void my_swap(int *a, int *b)
 {
-    char stock=0;
+    char stock = 0;
 
     stock = *a;
     *a = *b;

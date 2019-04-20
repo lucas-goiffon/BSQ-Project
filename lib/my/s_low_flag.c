@@ -13,8 +13,7 @@ int s_low_flag(char const *format, int *i, va_list ap)
     int a = *i;
     int count = 0;
 
-    if (format[a] == 's') {
+    if (format[a] == 's')
         count = my_putstr(va_arg(ap, char *));
-        return (count);
-    }
+    return (count);
 }

@@ -13,12 +13,11 @@ int o_flag(char const *format, int *i, va_list ap)
     int a = *i;
     int count = 0;
 
-    if (format[a] == 'o' && format[a - 1] != '#') {
+    if (format[a] == 'o' && format[a - 1] != '#')
         count = octal_conversion(va_arg(ap, unsigned long));
-        return (count);
-    } else if (format[a] == 'o' && format[a - 1] == '#') {
+    else if (format[a] == 'o' && format[a - 1] == '#') {
         my_putchar('0');
         count = octal_conversion(va_arg(ap, unsigned long));
-        return (count);
     }
+    return (count);
 }

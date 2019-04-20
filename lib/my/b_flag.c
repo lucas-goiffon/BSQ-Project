@@ -13,8 +13,7 @@ int b_flag(char const *format, int *i, va_list ap)
     int a = *i;
     int count = 0;
 
-    if (format[a] == 'b') {
+    if (format[a] == 'b')
         count = binary_conversion(va_arg(ap, unsigned long));
-        return (count);
-    }
+    return (count);
 }

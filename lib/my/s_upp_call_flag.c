@@ -13,8 +13,7 @@ int s_upp_call_flag(char const *format, int *i, va_list ap)
     int a = *i;
     int count = 0;
 
-    if (format[a] == 'S') {
+    if (format[a] == 'S')
         count = s_upp_flag(va_arg(ap, char *));
-        return (count);
-    }
+    return (count);
 }

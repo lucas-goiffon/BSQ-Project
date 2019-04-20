@@ -13,8 +13,7 @@ int d_and_i_flags(char const *format, int *i, va_list ap)
     int a = *i;
     int count = 0;
 
-    if (format[a] == 'd' || format[a] == 'i') {
+    if (format[a] == 'd' || format[a] == 'i')
         count = my_put_nbr(va_arg(ap, int));
-        return (count);
-    }
+    return (count);
 }

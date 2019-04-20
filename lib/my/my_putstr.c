@@ -10,6 +10,11 @@
 
 int my_putstr(char const *str)
 {
-    write(1, str, my_strlen(str));
-    return (my_strlen(str));
+    if (str == NULL) {
+        my_putstr("(null)");
+        return (0);
+    } else {
+        write(1, str, my_strlen(str));
+        return (my_strlen(str));
+    }
 }

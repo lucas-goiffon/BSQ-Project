@@ -13,12 +13,11 @@ int x_low_flag(char const *format, int *i, va_list ap)
     int a = *i;
     int count = 0;
 
-    if (format[a] == 'x' && format[a - 1] != '#') {
+    if (format[a] == 'x' && format[a - 1] != '#')
         count = hexa_conversion_low(va_arg(ap, unsigned long));
-        return (count);
-    } else if (format[a] == 'x' && format[a - 1] == '#') {
+    else if (format[a] == 'x' && format[a - 1] == '#') {
         my_putstr("0x");
         count = hexa_conversion_low(va_arg(ap, unsigned long));
-        return (count);
     }
+    return (count);
 }

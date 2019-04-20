@@ -13,8 +13,7 @@ int u_flag(char const *format, int *i, va_list ap)
     int a = *i;
     int count = 0;
 
-    if (format[a] == 'u') {
+    if (format[a] == 'u')
         count = my_put_unsigned_nbr(va_arg(ap, unsigned int));
-        return (count);
-    }
+    return (count);
 }

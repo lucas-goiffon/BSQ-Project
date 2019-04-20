@@ -62,3 +62,26 @@ int my_put_pointer(void *pointer)
     count = hexa_conversion_low(nb);
     return (count);
 }
+
+int my_put_short_nbr(short int nb)
+{
+    short int result;
+    static int count = 0;
+
+    if (nb < 0) {
+        nb = nb - nb - nb;
+        my_putchar(45);
+        count = count + 1;
+    }
+    result = nb % 10;
+    nb = nb / 10;
+    if (nb == 0) {
+        my_putchar(result + 48);
+        count = count + 1;
+        return (count);
+    }
+    my_put_short_nbr(nb);
+    my_putchar(result + 48);
+    count = count + 1;
+    return (count);
+}

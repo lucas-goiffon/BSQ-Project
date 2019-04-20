@@ -13,7 +13,7 @@ int ld_flag(char const *format, int *i, va_list ap)
     int a = *i;
     int count = 0;
 
-    if (format[a] == 'l' && format[a + 1] == 'd') {
+    if (format[a] == 'l' && (format[a + 1] == 'd' || format[a + 1] == 'i')) {
         count = my_put_long_nbr(va_arg(ap, long int));
         *i = a + 1;
     }

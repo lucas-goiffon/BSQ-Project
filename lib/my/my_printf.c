@@ -18,7 +18,7 @@ int option_printf(char const *format, int *z, va_list ap, ...)
     array;
     if (format[i] == '%') {
         i = i + 1;
-        for (int a = 0; a <= 13; a = a + 1)
+        for (int a = 0; a <= 14; a = a + 1)
             count = (*pointer_on_function[a])(format, &i, ap);
         if (format[i] == '%' && format[i] != '%')
             i = option_printf(format, &i, ap);

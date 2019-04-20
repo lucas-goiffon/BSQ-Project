@@ -9,14 +9,14 @@
 
 char *my_revstr(char *str)
 {
-    int	i=0;
-    int	y=my_strlen(str)-1;
+    int	i = 0;
+    int	y = my_strlen(str) - 1;
     char c;
 
-    while (i < my_strlen(str)/2) {
-        c=str[i];
-        str[i]=str[y];
-        str[y]=c;
+    while (i < my_strlen(str) / 2) {
+        c = str[i];
+        str[i] = str[y];
+        str[y] = c;
         i++;
         y--;
     }

@@ -13,8 +13,7 @@ int p_flag(char const *format, int *i, va_list ap)
     int a = *i;
     int count = 0;
 
-    if (format[a] == 'p') {
+    if (format[a] == 'p')
         count = my_put_pointer(va_arg(ap, void *));
-        return (count);
-    }
+    return (count);
 }
