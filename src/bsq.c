@@ -43,7 +43,8 @@ void find_bsq(char *buff, int i, bsq_t *bsq)
 
 void test_line(char *buff, int i, bsq_t *bsq)
 {
-    for (int x = 0; x < bsq->square; x = x + 1) {
+    for (int x = 0; i < (bsq->buff_size * bsq->lsize + bsq->buff_size)
+    && x < bsq->square; x = x + 1) {
         if (buff[i] == '.')
             bsq->count = bsq->count + 1;
         i = i + 1;

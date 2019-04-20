@@ -13,10 +13,11 @@ char *read_file(int fd, int buff_size, int *lsize)
     int len = 0;
     int llsize = *lsize;
     int size = buff_size * llsize + buff_size;
-    char *buff = malloc(sizeof(char) * (size + 1));
+    char *buff = malloc(sizeof(char) * (size + 14));
 
     set_buff_size(fd);
-    read(fd, buff, (size + 10));
+    fill_str(buff, size + 14);
+    read(fd, buff, size);
     buff[size] = '\0';
     return (buff);
 }
@@ -48,11 +49,12 @@ char *open_and_read(int ac, char **av, int *bs, int *lsize)
 
 int set_buff_size(int fd)
 {
-    char c;
+    char c = 0;
     char *test = malloc(sizeof(char) * 11);
     int i = 0;
     int buff_size = 0;
 
+    fill_str(test, 11);
     while (c != '\n') {
         read(fd, &c, 1);
         test[i] = c;
@@ -65,7 +67,7 @@ int set_buff_size(int fd)
 
 void set_lsize(int fd, int *lsize)
 {
-    char c;
+    char c = 0;
     int i = 0;
 
     while (c != '\n') {
