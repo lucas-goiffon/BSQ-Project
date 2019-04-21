@@ -21,5 +21,5 @@ For example:
 ## No memory leaks
 ![Valgrind Screenshot](/bonus/valgrind.png?raw=true "Valgrind Screenshot")
 
-## Auteur
+## Author
 * **Lucas GOIFFON** - [lucas-goiffon](https://github.com/lucas-goiffon)
