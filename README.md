@@ -1,4 +1,6 @@
 # BSQ Project (Realised 26.11.18)
+###### {EPITECH First Year Project}
+
 One of the firsts projects of the year. The goal was to find the biggest dot square in a file and replace it by 'X'.
 
 ## Instructions
